@@ -1,0 +1,142 @@
+\documentclass[10pt,a4paper,UTF8]{ctexart}
+
+\linespread{1.5}
+\usepackage{geometry}%用于设置上下左右页边距
+	\geometry{left=2.5cm,right=2.5cm,top=3.2cm,bottom=2.7cm}
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{amsthm, amssymb, bm, color, framed, graphicx, hyperref, mathrsfs}
+\usepackage{mathrsfs}  
+	\setlength{\parindent}{2em}
+	\lstset{language=Matlab}%
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{subfloat}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{makecell}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+\setenumerate{partopsep=0pt,topsep=0pt,itemsep=-2pt,leftmargin=2em}
+\setitemize{itemsep=-2pt,partopsep=0pt,topsep=0pt,leftmargin=2em}
+
+\titlespacing*{\section}{0pt}{3pt}{3pt}
+\titlespacing*{\subsection}{0pt}{2pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{1pt}{1pt}
+\titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+
+\ctexset{secnumdepth=4,tocdepth=4}
+\setlength{\parindent}{0pt}
+\setstretch{1.35}
+
+
+\setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]{FZShuSong-Z01} 
+\setCJKsansfont[BoldFont={FZHei-B01}]{FZKai-Z03} 
+\setCJKmonofont[BoldFont={FZHei-B01}]{FZFangSong-Z02}
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01} 
+\setCJKfamilyfont{zhhei}{FZHei-B01} 
+\setCJKfamilyfont{zhkai}[BoldFont={FZHei-B01}]{FZKai-Z03} 
+\setCJKfamilyfont{zhfs}[BoldFont={FZHei-B01}]{FZFangSong-Z02} 
+\renewcommand*{\songti}{\CJKfamily{zhsong}} 
+\renewcommand*{\heiti}{\CJKfamily{zhhei}} 
+\renewcommand*{\kaishu}{\CJKfamily{zhkai}} 
+\renewcommand*{\fangsong}{\CJKfamily{zhfs}}
+
+
+\definecolor{mKeyword}{RGB}{0,0,255}          % bule
+\definecolor{mString}{RGB}{160,32,240}        % purple
+\definecolor{mComment}{RGB}{34,139,34}        % green
+\definecolor{mNumber}{RGB}{128,128,128} 
+
+\lstdefinestyle {njulisting} {
+	basewidth = 0.5 em,
+	lineskip = 3 pt,
+	basicstyle = \small\ttfamily,
+	% keywordstyle = \bfseries,
+	commentstyle = \itshape\color{gray}, 
+	basicstyle=\small\ttfamily,
+	keywordstyle={\color{mKeyword}},     % sets color for keywords
+	stringstyle={\color{mString}},       % sets color for strings
+	commentstyle={\color{mComment}},     % sets color for comments
+	numberstyle=\tiny\color{mNumber},
+	numbers = left,
+	captionpos = t,
+	breaklines = true,
+	xleftmargin = 1 em,
+	xrightmargin = 0 em,
+	frame=tlrb,
+	tabsize=4
+}
+
+\lstset{
+style = njulisting, % 调用上述样式 
+flexiblecolumns % 允许调整字符宽度
+}
+
+
+%================= 基本格式预置 ===========================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textsc{SOA and Software Engineering}}
+\rhead{面向服务的软件工程}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\theenumi}{(\arabic{enumi})}
+\CTEXsetup[format={\bfseries\zihao{-3}}]{section}
+\CTEXsetup[format={\bfseries\zihao{4}}]{subsection}
+\CTEXsetup[format={\bfseries\zihao{-4}}]{subsubsection}
+
+
+\renewcommand{\contentsname}{目录}  
+
+%\definecolor{shadecolor}{RGB}{241, 241, 255}
+\newcounter{problemname}
+\newenvironment{problem}{\stepcounter{problemname}\par\noindent\textbf{\arabic{problemname}.\,} \kaishu}{}
+\newenvironment{solution}{}{\vspace{0.25em}}
+
+\newcommand{\myline}{\uline{\ \ \ \ \ \ \ \ \ \ }}
+
+\begin{document}
+	\begin{center}
+		\LARGE\textbf{面向服务的软件工程简答题整理}
+	\end{center}
+
+	\setlength{\parskip}{0.25em}
+
+	\input{1.tex}
+	\input{2.tex}
+	\input{3.tex}
+	\input{4.tex}
+	\input{5.tex}
+	\input{6.tex}
+	\input{7.tex}
+	\input{8.tex}
+	\input{9.tex}
+	\include{10.tex}
+	\include{11.tex}
+	\include{SOA参考架构模型.tex}
+	\include{服务设计原则.tex}
+
+\end{document}
+

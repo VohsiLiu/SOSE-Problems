@@ -1,0 +1,38 @@
+\subsubsection*{\S\ Web Service核心}
+\setcounter{problemname}{0}
+
+\begin{problem}
+	SOAP定义了在分布式异构环境中进行信息交换的消息框架和单向、无状态的通信范例。它不是一个网络传输协议，因此，必须通过绑定机制将SOAP消息与实际的网络消息格式进行关联。
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	在我们使用SOAP来传递XML信息时，由上层的应用来解释SOAP所携带XML消息的语义语法。虽不是必须，一般来说，必选的核心的相关信息被放置在消息体（Body），可选的辅助性的相关信息被放置在消息头（Header）
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	WSDL以XML的方式描述了一个服务的功能、调用地点和调用方式。WSDL中所定义的操作（Operation）按照风格可以分为面向文档（Document-Oriented）和面向过程（Procedure-Oriented）。其主要区别在于所使用的SOAP绑定风格不同：前者使用Message-exchange风格的SOAP消息，而后者使用RPC风格的SOAP消息。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	主要的区别在于：是接受一个用XML Schema约定的XML文档作为输入输出，还是采用远端的过程接口加上映射方式决定输入输出。
+\end{solution}
+
+
+\begin{problem}
+	WSDL模型被分为抽象部分（Abstract Section）和具体部分（Concrete Section）。抽象部分包括types、interface元素；具体部分包括binding、service元素。抽象部分和具体部分可以由不同的设计人员/团队加以定义，并加以组装。拥有相同抽象部分的服务被称为服务簇（Services Cluster），它们拥有相同/相似的服务能力，在满足其他条件（如非功能性需求）的前提下，可以相互替代。
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	WSDL中的binding元素和SOAP中的绑定机制是类似的。因此，在使用WSDL+SOAP对服务进行描述时，binding元素可以省去。只有采用WSDL+HTTP对服务进行描述时，binding元素才是必须的。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	WSDL中的binding元素和SOAP中的绑定机制解决不同的问题。即使是使用WSDL$+$SOAP，binding元素也是必须的。
+\end{solution}
+

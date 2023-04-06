@@ -1,0 +1,390 @@
+\begin{problem}
+关于SOA，以下哪些描述是正确的？
+\uline{A}
+\begin{enumerate}[label=\Alph*.]
+    \item 三角形SOA操作模型涉及的三个角色是：服务请求者，服务提供者和服务注册表
+    \item 服务可以非正式地分类为任务服务，实体服务和实用服务。其中，只有任务服务可以作为服务组合实现
+    \item 在面向服务的情况下，软件开发分为三个阶段：平台开发、服务开发和应用开发。应用程序开发可以由业务专家使用服务组合来完成
+    \item Web服务是一种面向服务的编程语言，用于构建SOA中的服务
+    \item 只要自包含、平台/实现无关且可重用，本地或网络软件组件都可以被视为服务
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}[label=\Alph*.]
+    \item 三角形SOA操作模型涉及三个角色：服务请求者、服务提供者和服务注册表。服务请求者向服务提供者发送特定服务的请求，而服务注册表提供可供服务请求者使用的可用服务目录。
+    \item 服务可以被分类为不同类型，包括任务服务、实体服务和实用程序服务。然而，所有类型的服务都可以作为服务组合实现。
+    \item 在面向服务的体系结构中，软件开发被划分为两个阶段，服务开发和应用程序开发。应用程序开发可以由业务专家通过服务组合来完成。
+    \item Web 服务不是一种编程语言，而是在互联网上不同软件系统之间进行通信的标准化方式。
+    \item 服务是自治、开放、自描述、与实现无关的网络构件。
+\end{enumerate}
+\end{solution}
+
+\begin{problem}
+以下哪个选项是在给定XML应用中不使用文档对象模型（DOM）的最佳原因？
+\uline{C}
+\vspace{-0.8em}
+\begin{multicols}{2}
+    \begin{enumerate}[label=\Alph*.]
+        \item 应用需要进行复杂处理
+        \item 应用可以是非验证的
+        \item 应用用受到内存使用的重大限制
+        \item 架构需要使用属性
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}[label=\Alph*.]
+    \item 如果应用需要进行复杂处理，则DOM可能是最好的选择，因为它提供了广泛的API和功能。
+    \item 是否对应用进行验证不会影响DOM的使用。
+    \item 如果应用受到内存使用的重大限制，则DOM可能不是最好的选择，因为它需要将整个文档加载到内存中进行处理。
+    \item DOM可以处理具有属性的XML文档，因此这不是不使用DOM的原因。
+\end{enumerate}
+\end{solution}
+
+
+\begin{problem}
+XSL样式表是XML文档吗？
+\uline{A}
+\vspace{-0.8em}
+\begin{multicols}{2}
+    \begin{enumerate}[label=\Alph*.]
+        \item 是
+        \item 不是
+        \item 取决于头部
+        \item 只有当它被应用于XML文档时
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+\begin{solution}
+XSL样式表（XSL Stylesheet）是一种基于XML语言的文档，用于定义XML文档的显示方式和转换方式。它是一种XML文档，其中包含有关如何显示或转换XML文档的指令和规则。
+
+XSL样式表包含了用于生成另一种XML文档的模板和指令。通过使用XSL样式表，可以将XML文档转换为其他格式，例如HTML、PDF等。XSL样式表使用XSLT（XSL转换）语言来转换XML文档，同时使用XPath语言来选择和处理XML文档中的数据。
+\end{solution}
+
+
+\begin{problem}
+在SOAP消息中，以下哪个部分在\sverb|env:Envelope|\;中是必须的？(\verb|xmlns: env="http://www.w3.org| \\\verb|/2003/05/soap-envelop"|)
+\uline{B}
+\vspace{-0.8em}
+\begin{multicols}{4}
+    \begin{enumerate}[label=\Alph*.]
+        \item \verb|env: Header|
+        \item \verb|env: Body|
+        \item \verb|env: Fault|
+        \item A和B都是必须的
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+\begin{solution}
+Envelope元素表示SOAP消息结构的根，其包括一个强制的Body结构和一个可选的Header结构。
+\end{solution}
+
+
+
+
+\begin{problem}
+关于SOAP，以下哪些说法是不正确的？
+\uline{D}
+    \begin{enumerate}[label=\Alph*.]
+        \item SOAP是一种消息交换协议，提供无状态、单向消息交换范式，但可以用于创建更复杂的交互模式。
+        \item 在SOAP处理模型中，定义了两种类型的中介：转发中介和主动中介。
+        \item 在SOAP错误消息中，\verb|env:body|\;的直接子元素应为\sverb|env:fault|。
+        \item 在SOAP处理模型中，SOAP头用于携带增值特性的信息，可以由最终接收者和/或中介处理。SOAP正文用于携带从初始发送方到最终接收方的有效负载，可以被最终接收者和/或中介访问，但只能由最终接收者修改。
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+在SOAP处理模型中，定义了两种中介类型：
+\begin{itemize}
+    \item 转发中介：它们负责在SOAP消息的路由路径上将消息转发到下一个接收者，而不对消息进行处理或修改。
+    \item 主动中介：它们负责对SOAP消息进行处理和/或修改，然后将其转发到下一个接收者。它们可以根据消息内容执行复杂的操作，如安全处理、路由决策、负载均衡等。
+\end{itemize}
+\end{solution}
+
+
+\begin{problem}
+在WSDL中，以下哪个元素不能是\;\verb|description|\;元素的直接子元素
+\uline{E}
+\vspace{-0.8em}
+\begin{multicols}{6}
+    \begin{enumerate}[label=\Alph*.]
+        \item types
+        \item interface
+        \item binding
+        \item service
+        \item endpoint
+        \item import
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+\begin{solution}
+endpoint元素是服务端点的定义，是service元素的子元素。
+\end{solution}
+
+
+\begin{problem}
+关于WSDL，哪一个说法是不正确的？
+\uline{C}
+    \begin{enumerate}[label=\Alph*.]
+        \item WSDL文档用于定义服务，从某个WSDL文档派生的服务具有相似的功能。
+        \item 接口(interface)和操作(operation)元素用于定义服务的抽象能力，而绑定(binding)、端点(endpoint)和服务(service)元素用于将接口链接到具体的消息和部署信息。
+        \item 在一个接口中，操作可以在一个命名空间下共享相同的名称，只要它们具有不同的输入/输出消息的定义。这被称为“重载”。
+        \item 由于错误消息被接口中的操作共享，因此定义了元素fault作为元素Interface的直接子元素，并通过名称引用。
+        \item 除了XML模式，我们还可以在WSDL中使用一些其他模式定义语言。
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+在WSDL中，操作名称必须在接口中唯一，无论它们的输入/输出消息定义是否相同。这是因为操作名称将用作Web服务的公共API，不允许使用重载。
+\end{solution}
+
+
+\begin{problem}
+关于Code 1，以下哪个说法不正确？
+\uline{B}\footnote{答案给的是B，但查了半天的说法都是“如果 SOAP 消息包含带有事务 ID 的标头块，则它用于关联事务中的请求和响应消息。因此，响应消息必须包含具有相同事务 ID 的相同标头块。如果响应消息不包含相同的头块，则意味着响应与原始请求无关，无法实现关联。在这种情况下，生成 SOAP 错误消息适合指示响应无效或意外。”}
+    \begin{enumerate}[label=\Alph*.]
+        \item Header block事务只需要由最终接收方处理。如果最终接收方失败，则应生成一个SOAP故障消息。
+        \item 由于Header block事务定义了事务ID，因此响应消息（如果有）必须包含该Header block，否则我们无法实现SOAP消息的相关性，因此应生成SOAP故障消息。
+        \item 可以添加多个Header block以支持更多特性。
+        \item Element Body中可以包含多个直接子元素。
+    \end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Code 1中显示的SOAP消息，最有可能是以下哪种类型的消息？
+\uline{B}
+\vspace{-0.8em}
+\begin{multicols}{2}
+    \begin{enumerate}[label=\Alph*.]
+        \item 基于XML的内容交换消息
+        \item RPC请求消息
+        \item RPC响应消息
+        \item 错误消息
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+
+\begin{center}
+\vspace{-0.5em}
+code 1. SOAP message Example
+\vspace{-1em}
+\end{center}
+\begin{lstlisting}
+POST /Reservations?code=FT352BQ HTTP/1.1
+Host: travelcompany.example.org
+content-Type: application/soap+xml; charset="utf-8"
+Content-Length: nnnn
+<?xml version='1.0'?>
+<env: Envelope xmIns: env="http://www.w3.org/2003/05/soap-envelope"/>
+    <env: Header>
+        <t:transaction
+            xmlns:t="http://thirdparty.example.org/transaction"
+            env:encodingstyle="http://example.com/encoding"
+            env:mustUnderstand="true">5</t:transaction>
+    </env: Header>
+
+    <env: Body>
+        <m:chargeReservation
+                env:encodingstyle="http://www.w3.org/2003/05/soap-encoding"
+                xmlns:m="http://travelcompany.example.org/">
+            <m:reservation
+                    xmlns:m="http://travelcompany.example.org/reservation">
+                <m:code>FT35ZBQ</m:code>
+            </m:reservation>
+            <o:creditCard xmlns:o="http://mycompany.example.com/financial"> 
+                <n:name xmlns:n="http://mycompany.example.com/employees">
+                    Àke Jógvan dyvind 
+                /n:name>
+                <o:number>123456789099999</o:number>
+                <o:expiration>2005-02</o:expiration>
+            </o:creditCard>
+        </m:chargeReservation> 
+    </env:Body>
+</env:Envelope>
+\end{lstlisting}
+
+
+\begin{problem}
+关于Code 1，以下哪个说法不正确？
+\uline{C}
+    \begin{enumerate}[label=\Alph*.]
+        \item 发送此 SOAP 消息的发送方应该期望一个 HTTP 响应消息。由于 HTTP 是面向连接的，所以在 HTTP 响应消息中不需要地址信息。
+        \item 寻址方法是由 HTTP 规范定义的，而不是 SOAP 规范。
+        \item 如果在 HTTP 地址 URI 中使用参数\sverb|code=FT352BQ|\;来标识资源，则该 SOAP 消息是 Web 架构兼容的。SOAP 规范为 URI 计算指定了一个默认算法。
+        \item 属性\sverb|encodingstyle|\;用于定义元素的序列化方案。它的值是特定于应用程序的决定，并且假设互操作的能力已经“带外(out-of-band)”解决
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+SOAP 规范没有指定用于 URI 计算的默认算法。相反，它提供了构建与 Web 体系结构兼容的 URI 的指南。计算 URI 的实际算法取决于特定的实现和被识别的资源。
+\end{solution}
+
+
+\begin{problem}
+关于Code 2，以下哪个说法不正确？
+\uline{B}
+    \begin{enumerate}[label=\Alph*.]
+        \item 元素操作中的属性模式给出了此操作的MEP（消息交换模式）。由于采用URI标识，MEP不受WSDL 2.0预定义的8种类型的限制。
+        \item 如果元素操作中没有属性模式，则该操作的MEP由子元素的存在和顺序确定（输入，输出，故障，故障输出）。
+        \item 符号“\verb|#any|”表示操作“检索(retrieve)”接收任何单个元素作为输入。
+        \item “reservationDetails.xsd”定义消息类型“list:reservationList”。如果更改消息类型，则WSDL文档可能仍然相同。
+        \item 元素描述可以包含多个接口元素，只要它们具有不同的名称。
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+如果元素操作中没有属性模式，则该操作的MEP由正在使用的 WSDL 版本的默认消息交换模式决定，对于WSDL 1.1是请求-响应，对于 WSDL 2.0是输入-输出。
+\end{solution}
+
+
+\begin{center}
+\vspace{-1em}
+code 2. WSDL Example
+\vspace{-0.8em}
+\end{center}
+\begin{lstlisting}
+<?xml version="1.0" encoding="utf-8" ?>
+<description xmlns="http://www.w3.org/ns/wsdl"
+        targetNamespace="http://greath.example.com/2004/services/reservationList" 
+        xmlns:tns="http://greath.example.com/2004/services/reservationList"
+        xmlns:list=mhttp://greath.example.com/2004/schemas/reservationList" ...>
+    <types>
+        <xs:import
+            namespace=mhttp://greath.example.com/2004/schemas/reservationList"
+            schemalocation="reservationlist.xsd" />
+    </types>
+    <interface name="reservationListInterface">
+        <operation name="retrieve"
+                pattern="http://www.w3.org/ns/wsdl/in-out" wsdlx:safe="true">
+            <input messageLabel="In" element="#any" />
+            <output messageLabel="out" element="list:reservationList" />
+        </operation> 
+    </interface>
+    <binding name="reservationListSOAPBinding"
+            interface="tns:reservationListInterface"
+            type="http://www.w3.org/ns/wsdl/soap"
+            wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+        <operation ref="tns:retrieve"
+            wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response" />
+    </binding>
+    <service name="reservationListService"
+            interface="tns:reservationListInterface">
+        <endpoint name="reservationListEndpoint" 
+                binding="tns:reservationListSOAPBinding"
+                address="http://greath.example.com/2004/reservationList" />
+    </service>
+</description>
+\end{lstlisting}
+
+
+\begin{problem}
+关于Code 2，以下哪个说法不正确？
+\uline{B}
+    \begin{enumerate}[label=\Alph*.]
+        \item 在WSDL扩展中定义的属性\sverb|wsdix：safe="true"|\;表示此操作不会以任何方式强制客户端。在此示例中，我们将使用HTTP POST调用这些操作。
+        \item 元素service定义了interface和endpoint间的一对一对应关系。元素service只能有一个endpoint作为子元素。
+        \item 元素service中的某些信息（例如属性address）只能在服务部署后确认。
+        \item 在此示例中，元素binding是不可重用的。在可重用的绑定中，应省略属性interface和特定于操作和故障的绑定详细信息。
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+虽然元素service确实定义了interface和endpoints
+\footnote{endpoint 是指将服务绑定到特定网络地址的实例。它定义了如何访问服务，包括网络协议、网络地址和消息格式等。Endpoint 需要指定一个绑定（binding），以确保客户端能够正确地与服务进行交互。在一个服务中，可以定义多个 endpoint，每个 endpoint 都指向服务的不同实例。}
+之间的一对一关系，但它不限于只有一个endpoint作为子元素。service元素可以有多个endpoint，每个endpoint对应于同一接口的不同绑定。这允许客户根据他们的要求选择合适的endpoint。
+\end{solution}
+
+
+\begin{problem}
+关于Code 2，以下哪个说法是正确的？
+\uline{C}
+    \begin{enumerate}[label=\Alph*.]
+        \item 属性\sverb|schemaLocation="reservationList xsd"|用于定位schema。如果找不到schema，将生成一个SOAP故障。
+        \item 由于未在接口\sverb|reservationListInterface|\;中定义故障，因此服务请求者将不会接收任何SOAP故障消息。
+        \item 此示例中的所有属性\sverb|messageLabel|\;都可以省略。
+        \item 由于在操作中retrieve使用了“in-out”MEP，因此在SOAP-HTTP绑定中使用SOAP请求-响应MEP是唯一的选择。
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[label=\Alph*.]
+        \item 如果找不到 schemaLocation 属性中指定的 XSD 文件，Web 服务可能无法正常运行，但不一定会生成 SOAP 错误。
+        \item 如果在 WSDL 中没有为特定操作定义故障，服务仍将能够生成 SOAP 故障消息以响应错误，但客户端将无法理解故障，因为在WSDL。因此，最好在 WSDL 中为所有操作定义故障，以便客户端能够正确理解和处理错误。
+        \item 正确，对于只有一个输入/输出的情况，messageLabel可以省略。
+        \item 也可以使用SOAP 响应 MEP，使用 HTTP GET 方法在 HTTP 请求中返回一个包含 SOAP 消息的 HTTP 响应的正文。
+    \end{enumerate}
+\end{solution}
+
+
+\begin{problem}
+UDDI中不包括下列哪个元素？
+\uline{D}
+\vspace{-0.8em}
+\begin{multicols}{3}
+    \begin{enumerate}[label=\Alph*.]
+        \item bussinessEntity
+        \item businessService
+        \item bindingTemplate
+        \item TechnicalService
+        \item publisherAssertion
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}
+
+\begin{solution}
+UDDI包括五个主要元素，并使用XML Schema来正式表达其数据结构
+\vspace{-0.8em}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item businessEntity:商业实体信息及其提供的服务
+        \item businessService:商业实体所提供的服务
+        \item bindingTemplates:如何调用一个服务
+        \item tModel (Technical Models):特定概念和结构（主要是对于绿页的抽象）
+        \item publisherAssertion:表达商业关系
+    \end{itemize}
+\end{multicols}
+\vspace{-1em}
+\end{solution}
+
+
+\begin{problem}
+考虑以下XML代码\sverb|<paragraph> Click <link> here </link> to apply </paragraph>|，如果使用SAX解析器（一种流式XML解析器），以下事件将按照什么顺序发生？
+\uline{B}
+\vspace{-0.8em}
+\begin{multicols}{3}
+    \begin{enumerate}[label=\arabic*.]
+        \item 开始元素-名称: paragraph
+        \item 结束元素-名称: paragraph
+        \item 开始元素-名称: Link
+        \item 结束元素-名称: link
+        \item 字符串: Click
+        \item 字符串: here
+        \item 字符串: to apply
+        \item 结束字符串
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\vspace{-0.8em}
+\begin{multicols}{2}
+    \begin{enumerate}[label=\Alph*.]
+        \item 1、5、7、3、6、4、2
+        \item 1、5、3、6、4、7、2
+        \item 1、5、6、7、3、4、2
+        \item 1、5、8、3、6、8、4、7、8、2
+    \end{enumerate}
+\end{multicols}
+\vspace{-1em}
+\end{problem}

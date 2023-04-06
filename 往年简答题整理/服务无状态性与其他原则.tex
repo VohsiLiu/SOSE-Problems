@@ -1,0 +1,21 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    服务无状态性与服务可复用性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 减少活动相关逻辑使一个服务变得更加无关（而无关服务具有更好的可复用性）
+        \item 提高服务的可扩展性和可用性使得它们可以在更多的服务组合中被更多的服务消费者复用
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务无状态性与服务自治
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 状态信息的本质通常是特定于一个给定的活动或者业务流程的，通过在服务边界外改变状态管理机制和流程的职责，就可以降低服务逻辑依赖于更大的业务任务的可能性。这使得服务能够更加自给自足，并且能够被定位成技术环境的一个独立部分，因而直接增加其整体自治性
+        \item 另一方面，由环境架构所提供的状态管理延迟选项可要求服务形成在其边界外的一个直接依赖。这种类型的外部实现耦合会影响到一个服务的整体自治
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

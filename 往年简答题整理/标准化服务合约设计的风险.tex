@@ -1,0 +1,34 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    版本化（服务合约的演化）
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务实施后，就有可能建立起与服务消费者之间的依赖关系
+        \item 底层逻辑越是可复用，那些需要消费它的程序的数量和消费频率就会越大
+        \item 可扩展性可能引入“破坏”既定合约的重大变化，从而导致发布新的服务版本的要求 
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    技术依赖
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 不同的编程语言和开发平台来实现
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 使用基于构件的系统并通过增强的RPC技术以支持面向服务
+            \item Web Service平台以及它的非专用的通信框架
+        \end{itemize} 
+        \item 操作性系统层的技术性变化导致服务合约变化
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    开发工具缺陷
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 使用开发工具自动生成合约可能产生非标准化的服务合约
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

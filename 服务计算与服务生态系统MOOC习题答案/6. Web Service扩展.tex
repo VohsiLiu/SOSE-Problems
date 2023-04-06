@@ -1,0 +1,40 @@
+\subsubsection*{\S\ Web Service扩展}
+\setcounter{problemname}{0}
+
+\begin{problem}
+	UDDI存放的信息可以分为白页（White Pages）、黄页（Yellow Pages）和绿页（Green Pages）。在使用UDDI发布Web Services时，使用白页记录WSDL的抽象部分；使用绿页记录WSDL的具体部分；使用黄页记录服务合约中的其他信息。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	白页存放基本信息、黄页存放分类信息、绿页存放技术信息。
+\end{solution}
+
+
+\begin{problem}
+	BPEL是一种使用编排风格实现服务组合的规范。一方面BPEL要求组合成员在WSDL中以partnerLinkType元素说明它在组合中的作用和地位；另一方面使用BPEL文档描述该组合的逻辑流程。BPEL公布了服务实现的细节。
+	\hfill （\ding{51}）
+\end{problem}
+
+\begin{problem}
+	WS-Addressing被用以完成服务实现中的寻址和消息路由。WS-Security被用以实现Web Service安全相关的非功能性需求。
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	WSRF被用以完成服务相关资源的定义和管理。无论是有状态服务（Stateful）还是无状态服务（Stateless）都可以使用它来定义和管理资源。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	一般认为，携有资源的服务为有状态服务。
+\end{solution}
+
+
+\begin{problem}
+	WS-Coordination被用以支持服务之间的复杂协作，它定义了协作服务和协作上下文，只能使用原子事务（Atomic Transactions）和业务活动（Business Activity）两种协议分别完成短时间协作和长时间协作。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	亦可自己扩展相关的协作协议。
+\end{solution}
+

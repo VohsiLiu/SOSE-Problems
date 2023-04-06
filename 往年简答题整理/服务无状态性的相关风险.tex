@@ -1,0 +1,28 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    对于架构的依赖
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 要建立服务设计和一个外部状态延迟选项的相互依赖关系
+        \item 需要权衡这种依赖关系和延迟状态所带来的好处
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    增加的运行时性能需求
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 在从无状态到有状态进行切换时，可能会需要找回、解析然后再在服务中执行状态数据，这将会在消息内容的实际处理之外引入额外的性能开销
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    低估交付代价
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 特定于活动的数据需要在运行过程中被接收、解析、处理和延迟的事实，需要服务的底层方案逻辑包含这些复杂的算法和例程。这不仅会带来额外的设计考虑，还伴随着确保该服务能够处理大量可能的情况和大量的活动数据所需要的编程和测试的代价
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

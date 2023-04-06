@@ -1,0 +1,64 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    服务可组合性与标准化服务合约
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务可组合性的应用强调服务间需要一致的合约标准
+        \item 由服务可组合性原则引起的考虑可以用来帮助形成服务合约设计标准，以便支持特定于组合（尤其是复杂的组合）的需求        
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务松散耦合
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务所具有的依赖关系会造成一些根本性的约束，直接制约服务能够达到的可组合性级别
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务抽象
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 当服务被抽象化以隐藏复杂性时，需要更多的注意服务组合的性能和可靠性，同时也需要更好地管理服务组合的演化。
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务可复用性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 当一个成熟的服务库存建立起来的时候，服务组合就成为最常用的服务复用方式
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务自治
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 这两个原则之间是“整体-部分”的关系
+        \item 控制器服务在组合其他服务时需要牺牲其自治性（等价于对所有涉及的服务组合成员的自治性的综合度量结果）
+        \item 服务自治性的提高有助于产生高效的组合成员
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务无状态性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 尽可能地减轻每个组合成员在状态管理方面的责任，可以更精细、更优化地执行整体的组合实例
+        \item 为了能够在同一个服务库存中重复地装配出高效的服务组合，服务之间需要能够通过一致并且有效的方式共享状态数据 
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务可组合性与服务可发现性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务可发现性可以让组合中的服务更容易被发现和调用，从而提高了服务的可组合性。而服务可组合性也可以让组合中的服务更加灵活和可扩展，从而提高了服务的可发现性
+        \item 作为组合控制器的服务能力可以负责描述它所封装的整个组合逻辑，并达到服务抽象原则所允许的任意程度
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

@@ -1,0 +1,42 @@
+\subsubsection*{\S 面向服务的架构和Web Service}
+\setcounter{problemname}{0}
+
+\begin{problem}
+	服务系统中的三要素包括：服务提供者、服务消费者和服务注册（Service Registry）。其中，服务注册通过支持服务的发布和查找，实现服务提供者和服务消费者之间的松耦合，从而实现服务系统灵活、可动态配置的特点。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	服务系统中没有关于服务注册的要求。
+\end{solution}
+
+
+\begin{problem}
+	由是否拥有中心协调者作为判断，服务组合（Composition）的方法可以分为编排（Orchestration）和编导（Choreograph）。从能力上来说，它们各有不同，在实际使用时需要根据业务场景进行选择。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	从能力上来说他们是等价的。
+\end{solution}
+
+
+\begin{problem}
+	对应服务生态系统，SOA-RA（SOA参考架构）中，我们使用垂直层来分层设计并实现直接满足消费者需求的垂直服务；我们使用水平层来分层设计并实现用以实现灵活、复用的水平服务。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	SOA-RA中，水平层用以实现功能，垂直层用于提供支持和QoS。他们和服务生态系统中的垂直服务和水平服务的分划方式没有关系。
+\end{solution}
+
+
+\begin{problem}
+	服务簇由服务层进行定义，它是一类从概念上服务于同一个业务功能的服务集合。他们可以由不同的服务提供者所发布，并在功能上可以相互替代。而业务过程层中，无论采用组合还是分解的方式，实质上都是面向服务簇来进行的。
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	面向服务的架构并没有限定实现技术，常见的实现技术包括但不限于：Web Service、分布式对象、构件、RESTful Services、ESB等。
+	\hfill （\ding{51}）
+\end{problem}
+
+

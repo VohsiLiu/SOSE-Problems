@@ -1,0 +1,48 @@
+\subsubsection*{SOA参考架构}
+\begin{figure}[H]
+    \vspace{-0.5em}
+	\centering
+	\includegraphics[width=0.7\textwidth]{SOA参考架构.pdf}
+    \vspace{-1em}
+\end{figure}
+
+水平层：对功能性需求加以满足，五个水平层分为服务提供者和服务消费者两组：
+\begin{itemize}
+    \item 服务提供者（后台）
+\end{itemize}
+\begin{spacing}{1.2}
+    \input{SOA水平层服务提供者.tex}
+    \vspace{-2.5em}
+\end{spacing}
+
+\begin{itemize}
+    \item 服务消费者（前台）
+\end{itemize}
+
+\begin{spacing}{1.15}
+    \input{SOA水平层服务消费者.tex}
+    \vspace{-1em}
+\end{spacing}
+
+垂直层：对当前系统进行支撑以及实现服务质量、非功能性需求
+\begin{spacing}{1.15}
+    \input{SOA垂直层.tex}
+    \vspace{-2em}
+\end{spacing}
+
+\begin{itemize}
+    \item SOA-RA 展示了如何将 SOA 解决方案构建为一组逻辑层的抽象。
+    \item SOA-RA 是一种松耦合的架构，因为每个层不严格隐藏在上面的层之中。
+    \item SOA-RA 是一个企业级架构模板，通过定义参考架构指导在企业级别上创建 SOA 解决方案。
+    应用 SOA-RA 模型来定义 SOA 导向的系统架构的一种实践称为服务导向建模和架构（SOMA）。
+    \item 在SOA-RA层中配置组件定义了三个步骤：
+    \vspace{-0.8em}
+    \begin{multicols}{3}
+    \begin{itemize}
+        \item 服务识别步骤
+        \item 服务规范步骤
+        \item 服务实现步骤
+    \end{itemize}
+    \end{multicols}
+    \vspace{-1em}
+\end{itemize}

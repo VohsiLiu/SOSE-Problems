@@ -1,0 +1,21 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    “逻辑-合约”耦合的限制
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 同一底层逻辑对应两个或者多个合约，从而建立多个入口，每一入口向不同类型的消费者暴露不同的服务能力
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    Schema耦合太“松散”
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 为了强调服务的兼容性演化能力，通过过分简化服务合约，追求减少消费者依赖，仅确定了一些非常通用的数据类型（弱类型）
+        \item 验证并处理弱类型，增加服务所需的性能要求
+        \item 服务合约发布的信息越少，消费者程序就需要知道越多关于服务实现逻辑的信息，从而产生消极耦合  
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

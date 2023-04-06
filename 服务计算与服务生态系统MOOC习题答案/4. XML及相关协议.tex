@@ -1,0 +1,41 @@
+\subsubsection*{\S\ XML及相关协议}
+\setcounter{problemname}{0}
+
+\begin{problem}
+	信息交换的范围可以分为应用内部（Intra-Application）、应用之间（Inter-Application）、系统之间（Inter-System）和公司之间（Inter-Company）。XML可以用以进行上述任意类型的信息交换。
+	\hfill （\ding{51}）
+\end{problem}
+
+
+\begin{problem}
+	XML是一种以树结构交换文本信息的信息交换标准，无法被用以交换二进制数据。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	XML可以用来交换二进制数据。
+\end{solution}
+
+
+\begin{problem}
+	XML既可以面向数据，也可以面向展现。在面向展现时，XML可以使用预定好的元素和属性表达Web页面，在Web浏览器打开该页面时，如果发生结束标签缺失或标签大小写不匹配等问题时，与HTML类似，Web浏览器可以自动纠正这些错误。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	XML是面向数据的，他的语义和展现无关，亦没有任何面向页面的预定义标签，任何XML均应满足格式良好的限定条件。
+\end{solution}
+
+
+\begin{problem}
+	名称空间（Namespace），采用前缀（Prefix）$+$本地部分（Local part）表达元素和属性名称，从而解决命名冲突和全球化的问题。 通过import机制可以把隶属在不同名称空间（前缀对应不同URI）中的元素（属性）组装为一个XML文档。
+	\hfill （\ding{55}）
+\end{problem}
+\\ \begin{solution}
+	无需额外机制，即可通过QName在单一XML文档中融合来源于不同Namespace的元素或者属性。
+\end{solution}
+
+
+\begin{problem}
+	只要满足$5+1$条基本原则（单根原则、元素（Element）标签原则、元素嵌套原则、元素原则、属性原则和XML声明原则），XML文档就可以被称为良好格式化（Well-formed）。在此基础上，如有需要，还可以使用Schema脚本等对XML文档进行数据类型检查，这个过程称为验证（Validation）。
+	\hfill （\ding{51}）
+\end{problem}
+

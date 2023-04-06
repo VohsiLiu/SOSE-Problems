@@ -1,0 +1,59 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    标准化服务合约与服务松散耦合
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 消费者和服务之间存在对服务合约中技术接口的依赖
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 技术服务合约越详细，越内容丰富，消费者和服务之间的依赖关系越强
+            \item 两个服务之间所达到的松散耦合程度直接与在服务合约中的依赖关系数量相关
+        \end{itemize}
+        \item 标准化的合约将会有助于提高服务之间的一致性和耦合质量
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    标准化服务合约与服务抽象 
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务抽象原则要求简化合约
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 非核心信息都被隐藏
+        \end{itemize}
+        \item 服务合约的设计决定了抽象的程度
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 在合约中的内容越仔细，服务中被抽象的信息就越少
+        \end{itemize}
+    \vspace{-1.2em}
+    \end{itemize}  
+    \\ \hline
+    标准化服务合约与服务可复用性 
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务可复用性原则常常侧重于服务封装的逻辑是否足够一般和通用
+        \item 可复用方案逻辑与数据交换之间的关系最终要由服务合约是如何设计的来决定
+        \item 服务合约越是通用、灵活和可扩展，服务的长远复用潜力就越大
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    标准化服务合约与服务可发现性 
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务合约越是得到一致的标注和结构化，对于那些需要使用它们的人来说就越是可以预测的
+        \item 服务合约越是标准化，元信息的技术接口细节提供得越是充分，服务的可发现性就越高
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    标准化服务合约与服务可组合性 
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务的可组合性需求常常与服务合约表达其能力的粒度有关
+        \item 粗粒度的操作拥有更高的效率，但常常不适应于需要参与到更大规模组合中的服务
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

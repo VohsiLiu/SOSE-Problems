@@ -1,0 +1,35 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    错误地判断服务的范围
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务自治倾向于产生隔离的服务
+        \item 如果在服务建模过程中，错误计算或者错误判断了服务的范围定义，在被部署到一个隔离的环境之后，将很难再被改变
+        \item 服务能力也有类似的问题
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    包装服务和遗留逻辑封装
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 与封装相关联的服务自治风险包括：
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 为了实现服务而使用的服务适配器不够灵活，并且无法被充分定制。这会威胁到标准化和可发现性这类设计特性
+            \item 底层遗留环境是无法被定制的，因而会危害到其他面向服务原则的应用
+        \end{itemize} 
+        \item 当服务的实现需要封装遗留逻辑时，它所能达到的自治级别几乎总是会明显降低
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    对服务需求的过高估计
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务自治要求较高的资源，长期高估服务的使用需求，可能会在一定程度上破坏面向服务计算的减低IT负载的目标
+        \item 因此，即使资源非常充裕，对需要达到较高自治级别的服务也需逐个进行代价评估
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

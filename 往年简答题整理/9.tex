@@ -1,0 +1,59 @@
+\begin{problem}
+以UDDI和WSIL为例，分别阐述集中式和分布式服务发布/查询的过程，并对比这两种方法。
+\end{problem}
+
+\begin{solution}
+\begin{spacing}{1.2}
+    \vspace{-0.5em}
+    \begin{longtable}{|m{7.5cm}|m{7.5cm}|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{集中式发布}} & \multicolumn{1}{c|}{\textbf{集中式查询}} \\ \hline
+        \vspace{-1.1em}
+        \begin{enumerate}[label=\arabic*.,leftmargin=1.5em,itemsep=-3pt]
+            \item 软件公司和标准组织向服务注册发布规范，即tModel
+            \item 公司完成服务的开发，注册关于业务及提供的服务的描述
+            \item UDDI服务注册给每个实体指定一个唯一的标识符，从而能时刻了解所有实体的情况
+        \vspace{-1.3em}
+        \end{enumerate}                                           
+        & 
+        \vspace{-1.1em}
+        \begin{enumerate}[label=\arabic*.,leftmargin=1.5em,itemsep=-3pt]
+            \item 查询者使用UDDI查询API，根据业务信息、服务信息或服务类别等搜索相关的服务
+            \item UDDI找到相应服务的WSDL并生成SOAP发送给查询者，查询者根据WSDL中描述的接口等信息调用服务
+        \vspace{-1.3em}
+        \end{enumerate}
+        \\ \hline
+    \end{longtable}
+    \vspace{-1em}
+    \begin{longtable}{|m{7.5cm}|m{7.5cm}|} 
+        \hline
+        \multicolumn{1}{|c|}{\textbf{分布式发布}} & \multicolumn{1}{c|}{\textbf{分布式查询}} \\ \hline
+        \vspace{-1.1em}
+        \begin{enumerate}[label=\arabic*.,leftmargin=1.5em,itemsep=-3pt]
+            \item Web服务以XML文档的形式发布到常规 Web 服务器上
+            \item 使用WSIL来汇总现有服务描述文档的引用，引用指针可用于连接到在 UDDI 注册表中发布的服务，或连接到另一个 WSIL 文档
+            \item 这样不断的连接最终形成WSIL链
+        \vspace{-1.3em}
+        \end{enumerate}                                           
+        & 
+        主要基于通过 WSIL 文档链的迭代式搜索过程
+        \begin{enumerate}[label=\arabic*.,leftmargin=1.5em,itemsep=-3pt]
+            \item 确定起始WSIL文档的位置
+            \item 执行指定的WSIL文档搜索
+            \item 显示包含在WSIL文档中的链接列表
+            \item 选择链接以启动所选WSIL文档的内容。如果所启动的文档包含其他链接，请追踪链接以检索进一步的文档
+            \item 重复步骤3和4，迭代所有相关的链接，直到找到所需信息
+        \vspace{-1.3em}
+        \end{enumerate}  
+        \\ \hline
+    \end{longtable}
+    \vspace{-1em}
+\end{spacing}
+
+UDDI和WISL的主要区别在于代价和复杂性：
+\begin{itemize}
+    \item UDDI适用于希望得到最大复用、得到最大访问范围的服务。 UDDI可以被视为传统的黄页目录，将来自各个组织的已发布 Web 服务进行分类和组织。有着很强的扩展性和可移植性，分门别类，便于管理和共享；但缺点是维护量较大。
+    \item WSIL 使得 Web 服务能够通过普通 Web 服务器进行发现、部署和调用，而无需完整而复杂的服务 注册表基础设施。是一个比较便宜用于组织者共享Web服务的解决方案，适用于小型和简单的Web服务。其优点是代价较低。
+\end{itemize}
+
+\end{solution}

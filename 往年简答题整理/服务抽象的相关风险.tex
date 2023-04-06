@@ -1,0 +1,33 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    多消费者耦合的需求
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 不同消费者可能需要不同的技术接口细节，所需的抽象程度也不尽相同
+        \item 使用合约反规范化，提供不同级别的抽象粒度
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    人为误判
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 过于抽象的服务合约导致曲解或不能充分理解一个服务。从而丧失潜在的复用机会
+        \item 过于具体的服务合约导致对服务的行为作出与服务实现相关的假设，从而导致实现耦合
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    安全和隐私的考虑
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务合约可能暴露私有或者敏感信息
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item 不同的使用环境（组织内部 vs. 组织外部）
+            \item 并发和冗余的服务合约内容以解决这一问题
+        \end{itemize}
+    \vspace{-1.2em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}

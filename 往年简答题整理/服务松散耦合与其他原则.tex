@@ -1,0 +1,57 @@
+\begin{longtable}{|m{3cm}<{\centering}|m{12cm}|}
+    \hline
+    服务松散耦合与标准化服务合约
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 松散耦合鼓励调节技术合约内容的数量和复杂度，从而最小化消费者依赖需求、最大化服务所有者的自由度，在不影响现有消费者的情况下随着时间演化和改变服务
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务松散耦合与服务抽象
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 创建更低耦合的消费者关系，明确地要求应用良好定义的功能和技术抽象级别
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务松散耦合与服务可复用性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 减少依赖关系可以使服务更容易被组合、演化甚至扩充以支持不断变化的业务需求和方向
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务松散耦合与服务自治
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 减少消极耦合类型的程度，会为运行时和设计时的更高自治级别提供支持
+        \item 服务消费者具有越多的跨服务依赖，它所具有的自主权就越少（服务消费者可能同时担任复合服务中的服务协调者）
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务松散耦合与服务可发现性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 服务松散耦合有助于元数据的调节
+    \vspace{-1.5em}
+    \end{itemize}  
+    \\ \hline
+    服务松散耦合与服务可组合性
+    & 
+    \vspace{-1.3em}
+    \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+        \item 在服务组合中，避免消极形式的耦合
+        \begin{itemize}[leftmargin=1.5em,itemsep=-3pt,topsep=-3pt]
+            \item “合约-逻辑”耦合：如果服务合约是自动生成的，就很有可能在被其他服务使用时不符合标准。因此需要在它和其他组成成员之间进行转换
+            \item “合约-技术”耦合：如果同一个组合中的不同部分同时使用开放与专用服务技术，就会需要在本地实现技术转化层
+            \item “合约-实现”耦合：当一个服务合约与底层实现特性之间产生耦合时，就会最终把这些性质强加到作为一个整体的组合之上
+        \end{itemize} 
+    \vspace{-1.2em}
+    \end{itemize}  
+    \\ \hline
+\end{longtable}
